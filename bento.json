@@ -1,0 +1,18 @@
+{
+  "food": [
+    {
+      "name": "Soft shelled crab",
+      "price": 32.67,
+      "kilos": 2,
+      "sides": ["rice", "salad", "ginger", "caviar"]
+    },
+    
+    {
+      "name": "Medium crab",
+      "price": 9,
+      "kilos": 0.25,
+      "sides": ["rice", "tears", "shame"]
+    }
+    
+    ]
+}
