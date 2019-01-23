@@ -1,0 +1,57 @@
+<html>
+
+<head>
+  <link rel= "stylesheet" href="menu.css">
+</head>
+
+<body>
+  
+  <h1 id="name1"></h1>
+  <p id="broth1"></p>
+  <p id="toppings1"></p>
+  <p id="price1"></p>
+  
+
+  <div id= "food1">
+  <button onclick="buy1()">Buy</button>
+  
+  <script>
+    var totalItems;
+    var myData;
+    var foodName = [];
+    var foodPrices = [];
+    
+    var food0name;
+    var food0price;
+    
+    /*********Ramen 1**********/
+    
+    var xmlhttp = new XMLHttpRequest();  //I want to begin a new file request from the server
+    xmlhttp.onreadystatechange = function () {  //Do this function to check if it is ready
+      if (this.readyState == 4 && this.status == 200) {  //If the server is ready(4) and the file is available(200)
+        var mydata = JSON.parse(this.responseText);  //Save the JSOn file as mydata and convert it in a readable format.
+        
+        food0name = mydata.food[0].name;
+        document.getElementById('name1').innerHTML = mydata.food[0].name;
+        document.getElementById('broth1').innerHTML = mydata.food[0].broth;
+        food0price = mydata.food[0].price;
+        document.getElementById('price1').innerHTML = mydata.food[0].price;
+        document.getElementById('toppings1').innerHTML = mydata.food[0].toppings;
+      }
+    };
+
+    xmlhttp.open("GET", "menu.json", true); //I will GET a file called menu.json
+    xmlhttp.send(); //Send to the browser
+    
+    function buy1() {
+      foodName.push(food0name);
+      window.alert(food0name);
+      foodPrices.push(food0price);
+      //document.getElementById(
+        window.alert(foodName);
+    }
+    
+  </script>
+  </div>
+
+</body>
