@@ -1,0 +1,58 @@
+{
+  "food": [
+    {
+      "name": "Shoyu ramen",
+      "broth": "Shoyu broth",
+      "toppings": ["egg","mushroom","green onion","bean sprout","choy sum", "fishcake"],
+      "sides": ["riceball", "vegetable tempura"],
+      "price": 7.00,
+      "ounces": 12
+    },
+    
+    {
+      "name": "Miso ramen",
+      "broth": "Miso broth",
+      "toppings": ["egg","mushroom","green onion","bean sprout","choy sum", "seaweed","corn"],
+      "sides": ["riceball","vegetable tempura"],
+      "price": 7.00,
+      "ounces": 12
+    },
+    
+    {
+      "name": "Tonkotsu ramen",
+      "broth": "Tonkotsu broth",
+      "toppings": ["egg","mushroom","green onion","bean sprout","choy sum","tonkotsu", "seaweed"],
+      "sides": ["riceball","gyoza"],
+      "price": 8.50,
+      "ounces": 12
+    },
+    
+    {
+      "name": "House Special",
+      "broth": "Tonkotsu broth",
+      "toppings": ["egg","mushroom","green onion","bean sprout","choy sum", "tonkotsu","corn","seaweed"],
+      "sides": ["riceball", "gyoza"],
+      "price": 8.50,
+      "ounces": 12
+    },
+    
+    {
+      "name": "Spicy shoyu ramen",
+      "broth": "Shoyu broth",
+      "toppings": ["egg","mushroom","green onion","bean sprout","choy sum", "tonkotsu","seaweed"],
+      "sides": ["riceball", "gyoza"],
+      "price": 7.50,
+      "ounces": 12
+    },
+    
+    {
+      "name": "Shoyu miso ramen",
+      "broth": "Miso broth",
+      "toppings": ["egg","mushroom","green onion","bean sprout","choy sum", "tonkotsu","seaweed"],
+      "sides": ["riceball", "gyoza"],
+      "price": 7.50,
+      "ounces": 12
+    }
+    
+    ]
+}
