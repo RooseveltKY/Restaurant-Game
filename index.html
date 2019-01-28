@@ -3,25 +3,30 @@
 <head>
   <link rel= "stylesheet" href="menu.css">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
 </head>
 
 <body>
+  <div id= "food0">
+    <h1 id="name0"></h1>
+    <p id="broth0"></p>
+    <p id="toppings0"></p>
+    <p id="price0"></p>
+    <input type="text" id="quantity" placeholder="Enter quantity">
+    <button onclick="buy0()">Buy</button>
+    <p>Number of Orders</p>
+    <p id= "numOfOrder"></p>
   
-  <div id= "food1">
-  <h1 id="name1"></h1>
-  <p id="broth1"></p>
-  <p id="toppings1"></p>
-  <p id="price1"></p> 
-  <button onclick="buy1()">Buy</button>
   
   <script>
-    var totalItems;
-    var myData;
+    
     var foodName = [];
     var foodPrices = [];
     
     var food0name;
     var food0price;
+    
+    var running_total_0 = 0;
     
     /*********Ramen 1**********/
     
@@ -31,33 +36,115 @@
         var mydata = JSON.parse(this.responseText);  //Save the JSOn file as mydata and convert it in a readable format.
         
         food0name = mydata.food[0].name;
-        document.getElementById('name1').innerHTML = mydata.food[0].name;
-        document.getElementById('broth1').innerHTML = mydata.food[0].broth;
+        document.getElementById('name0').innerHTML = mydata.food[0].name;
+        document.getElementById('broth0').innerHTML = mydata.food[0].broth;
         food0price = mydata.food[0].price;
-        document.getElementById('price1').innerHTML = mydata.food[0].price;
-        document.getElementById('toppings1').innerHTML = mydata.food[0].toppings;
+        document.getElementById('price0').innerHTML = "$"+mydata.food[0].price;
+        document.getElementById('toppings0').innerHTML = mydata.food[0].toppings;
       }
     };
 
     xmlhttp.open("GET", "menu.json", true); //I will GET a file called menu.json
     xmlhttp.send(); //Send to the browser
     
-    function buy1() {
+    function buy0() {
+      //Adding 1 to the number of times someone presses the button
+      running_total_0++;
+      //Output the price of the food and multiply it amount of times someone presses the button
+      document.getElementById('total_0_display').innerHTML = "Subtotal $"+food0price * quantity;
+      document.getElementById('numOfOrder').innerHTML= running_total_0;
+      //When they buy this item, the name of the food will push to the foodName array
       foodName.push(food0name);
-        window.alert(food0name); //This is a test to see if food0name exists.
-      window.alert(foodName.length); //This will show the length of the array
+      //I will push the price to the foodPrices array
       foodPrices.push(food0price);
-        
+      //Create a list item
+      var node= document.createElement('li');
+      //Create a text node that is the entire list of the array.
+      var textNode= document.createTextNode(foodName[0]);
+      console.log(foodName);
+      node.appendChild(textNode);
+      document.getElementById("orderList").appendChild(node);
     }
     
   </script>
   </div>
-  
-  <div id= "food2">
+
+
+  <div id= "food1">
+    <h1 id="name1"></h1>
+    <p id="broth1"></p>
+    <p id="toppings1"></p>
+    <p id="price1"></p>
+    <button onclick="buy1()">Buy</button>
+    <p>Number of Orders</p>
+    <p id= "numOfOrder1"></p>
+    
     
     <script>
+      var foodName1 = [];
+      var foodPrices1 = [];
+     
+      var food1name;
+      var food1price;
+      
+      var running_total_1 = 0;
+      
+      /*********Ramen 2**********/
+      
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          var mydata = JSON.parse(this.responseText);
+          
+          food1name = mydata.food[1].name;
+          document.getElementById('name1').innerHTML = mydata.food[1].name;
+          document.getElementById('broth1').innerHTML = mydata.food[1].broth;
+          food1price = mydata.food[1].price;
+          document.getElementById('price1').innerHTML = "$"+mydata.food[1].price;
+          document.getElementById('toppings1').innerHTML = mydata.food[1].toppings;
+        }
+      };
+  
+      xmlhttp.open("GET", "menu.json", true);
+      xmlhttp.send();
+      
+      function buy1() {
+        running_total_1++;
+        document.getElementById('total_1_display').innerHTML = "Subtotal $"+food1price * running_total_1;
+        document.getElementById('numOfOrder1').innerHTML= running_total_1;
+        foodName1.push(food1name);
+        foodPrices1.push(food1price);
+        var node1= document.createElement('li');
+        var textNode1= document.createTextNode(foodName[1]);
+        console.log(foodName1);
+        node1.appendChild(textNode1);
+        document.getElementById("orderList1").appendChild(node1);
+      }
       
     </script>
-  </div>
+    </div>
+
+    <div id= "showPurchase">
+      <h1 id= "yourOrder">Your Order</h1>
+      <script>
+        //running_total_0+= 1;
+        //var newText= $.createTextNode(parseFloat(x).toFixed(2));
+        //p.appendChild(newText);
+        //$.getElemetnById('totals').innerHTML= x;
+      </script>
+      
+      <ul id= "orderList"></ul>
+      <p id="total_0_display"></p>
+
+
+
+      <ul id= "orderList1"></ul>
+      <p id="total_1_display"></p>
+
+      <button onclick= "totalItems()">Checkout</button>
+      
+        
+        
+    </div>
 
 </body>
