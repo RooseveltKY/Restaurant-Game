@@ -1,9 +1,50 @@
+.img {
+  width: 10%;
+  height: 350px;
+  background-size: contain;
+}
+
+#title {
+  font-family: sans-serif;
+  font-size: 100px;
+  color: #343e54;
+}
+
+#ramen0 {
+  background-image: url("shoyuRamen.jpg");
+  background-size: auto 350px;
+  width: 250px;
+  height: 350px;
+  float: left;
+}
+
+#food0 {
+  width: 250px;
+  height: 350px;
+  color: #343e54;
+  background-color: #c1e8ff;
+  float: left;
+  padding: 25px;
+  border-right: 10px solid;
+  border-style: hidden;
+}
+
 #food1 {
   width: 250px;
   height: 350px;
   border-radius: 25px;
   color: #343e54;
-  background-color: #e0ffc1;
+  background-color: #95b5e9;
   float: left;
-  padding: 10px;
+  padding: 25px;
+}
+
+#showPurchase {
+  width: 250px;
+  height: 350px;
+  border-radius: 25px;
+  color: #343e54;
+  background-color: #f0cb66;
+  float: left;
+  padding: 25px;
 }
