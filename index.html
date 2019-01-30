@@ -7,23 +7,29 @@
 </head>
 
 <body>
+  <h1 id="title">Restaurant Site</h1>
+  <div id= "ramen0"></div>
+
+  
   <div id= "food0">
     <h1 id="name0"></h1>
     <p id="broth0"></p>
     <p id="toppings0"></p>
     <p id="price0"></p>
-    <input type="text" id="quantity" placeholder="Enter quantity">
+    <input type="integer" id="quantity" placeholder="Enter quantity...">
     <button onclick="buy0()">Buy</button>
-    <p id= "total_0_display"></p>
+    
 
   
   <script>
     
     var foodName = [];
     var foodPrices = [];
+    var total= [];
     
     var food0name;
     var food0price;
+    
     
     /*********Ramen 1**********/
     
@@ -36,7 +42,7 @@
         document.getElementById('name0').innerHTML = mydata.food[0].name;
         document.getElementById('broth0').innerHTML = mydata.food[0].broth;
         food0price = mydata.food[0].price;
-        document.getElementById('price0').innerHTML = "$"+mydata.food[0].price;
+        document.getElementById('price0').innerHTML = "$"+mydata.food[0].price+".00";
         document.getElementById('toppings0').innerHTML = mydata.food[0].toppings;
       }
     };
@@ -46,11 +52,23 @@
     
     function buy0() {
       //Output the price of the food and multiply it by the quantity
-      document.getElementById('total_0_display').innerHTML = "Subtotal $"+food0price * quantity;
+      var x= food0price*quantity.value;
+      document.getElementById('totalDisplay').innerHTML = "Subtotal= $"+x;
+      var y= x*0.04712.toFixed(2);
+      var z= y+x;
+      document.getElementById('taxTotal').innerHTML= "Total= $"+z;
+      
       //When they buy this item, the name of the food will push to the foodName array
       foodName.push(food0name);
       //I will push the price to the foodPrices array
       foodPrices.push(food0price);
+      foodPrices+x;
+      //Push the total with tax to the total array
+      total.push(z);
+      total+z;
+      //Clear input box
+      document.getElementById('quantity').value= "";
+
       //Create a list item
       var node= document.createElement('li');
       //Create a text node that is the entire list of the array.
@@ -58,6 +76,8 @@
       console.log(foodName);
       node.appendChild(textNode);
       document.getElementById("orderList").appendChild(node);
+      //document.getElementById('orderList').innerHTML= z;
+      window.alert(foodName.length);
     }
     
   </script>
@@ -66,22 +86,19 @@
     <div id= "showPurchase">
       <h1 id= "yourOrder">Your Order</h1>
       <script>
-        //running_total_0+= 1;
         //var newText= $.createTextNode(parseFloat(x).toFixed(2));
         //p.appendChild(newText);
-        //$.getElemetnById('totals').innerHTML= x;
+        //$.getElementById('totals').innerHTML= x;
       </script>
       
       <ul id= "orderList"></ul>
-      <p id="total_0_display"></p>
-
-
-
-      <ul id= "orderList1"></ul>
-      <p id="total_1_display"></p>
+      <p id="totalDisplay"></p>
+      <p id= "taxTotal"></p>
+      <script>
+        
+      </script>
 
       <button onclick= "totalItems()">Checkout</button>
-      
         
         
     </div>
