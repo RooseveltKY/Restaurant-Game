@@ -1,50 +1,148 @@
-.img {
-  width: 10%;
-  height: 350px;
-  background-size: contain;
-}
+.column {
+    float: left;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    float: left;
+  }
 
 #title {
-  font-family: sans-serif;
-  font-size: 100px;
-  color: #343e54;
+  font-family: "Courier New", Courier, monospace;
+  font-variant: small-caps;
+  font-size: 90px;
+  color: #020311;
+  text-align: center;
+  line-height: 0px;
+}
+
+#subtext {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  color: #020311;
+  text-align: center;
 }
 
 #ramen0 {
   background-image: url("shoyuRamen.jpg");
-  background-size: auto 350px;
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 250px;
-  height: 350px;
+  height: 300px;
   float: left;
 }
 
 #food0 {
+  font-family: "Courier New", Courier, monospace;
+  color: #020311;
+  background-color: #bbb5b0;
   width: 250px;
-  height: 350px;
-  color: #343e54;
-  background-color: #c1e8ff;
+  height: 300px;
   float: left;
-  padding: 25px;
-  border-right: 10px solid;
-  border-style: hidden;
+}
+
+#ramen1 {
+  background-image: url("misoRamen.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 300px;
+  float: left;
 }
 
 #food1 {
+  font-family: "Courier New", Courier, monospace;
   width: 250px;
-  height: 350px;
-  border-radius: 25px;
-  color: #343e54;
-  background-color: #95b5e9;
+  height: 300px;
+  color: #020311;
+  background-color: #bbb5b0;
   float: left;
-  padding: 25px;
+}
+
+#ramen2 {
+  background-image: url("tonkRamen.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 300px;
+  float: left;
+}
+
+#food2 {
+  font-family: "Courier New", Courier, monospace;
+  width: 250px;
+  height: 300px;
+  color: #020311;
+  background-color: #bbb5b0;
+  float: left;
+}
+
+#ramen3 {
+  background-image: url("houseSpecial.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 300px; 
+  float: left;
+}
+
+#food3 {
+  font-family: "Courier New", Courier, monospace;
+  width: 250px;
+  height: 300px;
+  color: #020311;
+  background-color: #bbb5b0;
+  float: left;
+}
+
+#ramen4 {
+  background-image: url("spicyShoyu.jpg");
+  background-size: cover;
+  width: 250px;
+  height: 300px;
+  background-repeat: no-repeat;
+  float: left;
+}
+
+#food4 {
+  font-family: "Courier New", Courier, monospace;
+  background-size: auto 300px;
+  width: 250px;
+  height: 300px;
+  color: #020311;
+  background-color: #bbb5b0;
+  float: left;
+}
+
+#ramen5 {
+  background-image: url("spicyMiso.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 300px;
+  float: left;
+}
+
+#food5 {
+  font-family: "Courier New", Courier, monospace;
+  width: 250px;
+  height: 300px;
+  color: #020311;
+  background-color: #bbb5b0;
+  float: left;
 }
 
 #showPurchase {
-  width: 250px;
-  height: 350px;
-  border-radius: 25px;
-  color: #343e54;
-  background-color: #f0cb66;
+  width: 1000px;
+  height: 150px;
+  color: #020311;
+  background-color: #d5ddcf;
+  font-family: "Courier New", Courier, monospace;
+  padding: 20px;
+  border-radius: 12px;
   float: left;
-  padding: 25px;
 }
