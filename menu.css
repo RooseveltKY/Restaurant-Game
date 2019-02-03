@@ -11,6 +11,7 @@
     float: left;
   }
 
+
 #title {
   font-family: "Courier New", Courier, monospace;
   font-variant: small-caps;
@@ -42,6 +43,8 @@
   background-color: #bbb5b0;
   width: 250px;
   height: 300px;
+  margin-right: 30px;
+  
   float: left;
 }
 
@@ -58,6 +61,7 @@
   font-family: "Courier New", Courier, monospace;
   width: 250px;
   height: 300px;
+  margin-right: 30px;
   color: #020311;
   background-color: #bbb5b0;
   float: left;
@@ -76,6 +80,7 @@
   font-family: "Courier New", Courier, monospace;
   width: 250px;
   height: 300px;
+  margin-right: 30px;
   color: #020311;
   background-color: #bbb5b0;
   float: left;
@@ -94,6 +99,7 @@
   font-family: "Courier New", Courier, monospace;
   width: 250px;
   height: 300px;
+  margin-right: 30px;
   color: #020311;
   background-color: #bbb5b0;
   float: left;
@@ -114,6 +120,7 @@
   width: 250px;
   height: 300px;
   color: #020311;
+  margin-right: 30px;
   background-color: #bbb5b0;
   float: left;
 }
@@ -132,15 +139,16 @@
   width: 250px;
   height: 300px;
   color: #020311;
+  margin-right: 30px;
   background-color: #bbb5b0;
   float: left;
 }
 
 #showPurchase {
-  width: 1000px;
-  height: 150px;
+  width: 1350px;
+  height: auto;
   color: #020311;
-  background-color: #d5ddcf;
+  background-color: #cfdcdd;
   font-family: "Courier New", Courier, monospace;
   padding: 20px;
   border-radius: 12px;
