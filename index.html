@@ -3,86 +3,81 @@
 <head>
     <link rel="stylesheet" href="menu2.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="page2.html"></script>
+    
 
 </head>
 
 <body>
-    <a href="page2.html">Checkout</a>
-    <h1 id="title">Order Site</h1>
-    <p id="subtext">1120 Nehoa St Honolulu, HI (808)123-4567</p>
-    
     <br>
-    <div class= "row">
-        <div class= "column" id="ramen0"></div>
-        <div class= "column" id="food0">
+    <h1 id="title">Order Site</h1>
+    <p id="subtext">1120 Nehoa St Honolulu, HI Contact Us (808)123-4567</p>
+
+    <br>
+    
+    <div class="row">
+        <div class="column" id="ramen0"></div>
+        <div class="column" id="food0">
             <h1 id="name0"></h1>
             <p id="broth0"></p>
             <p id="toppings0"></p>
             <p id="price0"></p>
-        <input type="integer" id="quantity" placeholder="Enter quantity...">
-        <button onclick="buy0()">Buy</button>
+            <input type="integer" id="quantity" placeholder="Enter quantity...">
+            <button onclick="buy0()">Buy</button>
         </div>
-    </div>
-
-    <div class= "row">
-        <div class= "column" id="ramen1"></div>
-        <div class= "column" id="food1">
+    
+    <div class="column" id="ramen1"></div>
+        <div class="column" id="food1">
             <h1 id="name1"></h1>
             <p id="broth1"></p>
             <p id="toppings1"></p>
             <p id="price1"></p>
-        <input type="integer" id="quantity1" placeholder="Enter quantity...">
-        <button onclick="buy1()">Buy</button>
+            <input type="integer" id="quantity1" placeholder="Enter quantity...">
+            <button onclick="buy1()">Buy</button>
         </div>
     </div>
-    
-    <div class= "row">
-        <div class= "column" id="ramen2"></div>
-        <div class= "column" id="food2">
+
+    <div class="row">
+        <div class="column" id="ramen2"></div>
+        <div class="column" id="food2">
             <h1 id="name2"></h1>
             <p id="broth2"></p>
             <p id="toppings2"></p>
             <p id="price2"></p>
-        <input type="integer" id="quantity2" placeholder="Enter quantity...">
-        <button onclick="buy2()">Buy</button>
+            <input type="integer" id="quantity2" placeholder="Enter quantity...">
+            <button onclick="buy2()">Buy</button>
         </div>
-    </div>
-
-    <div class= "row">
-        <div class= "column" id="ramen3"></div>
-        <div class= "column" id="food3">
+   
+        <div class="column" id="ramen3"></div>
+        <div class="column" id="food3">
             <h1 id="name3"></h1>
             <p id="broth3"></p>
             <p id="toppings3"></p>
             <p id="price3"></p>
-        <input type="integer" id="quantity3" placeholder="Enter quantity...">
-        <button onclick="buy3()">Buy</button>
+            <input type="integer" id="quantity3" placeholder="Enter quantity...">
+            <button onclick="buy3()">Buy</button>
         </div>
     </div>
-    
-    <div class= "row">
-        <div class= "column" id="ramen4"></div>
-        <div class= "column" id="food4">
+
+    <div class="row">
+        <div class="column" id="ramen4"></div>
+        <div class="column" id="food4">
             <h1 id="name4"></h1>
             <p id="broth4"></p>
             <p id="toppings4"></p>
             <p id="price4"></p>
-        <input type="integer" id="quantity4" placeholder="Enter quantity...">
-        <button onclick="buy4()">Buy</button>
+            <input type="integer" id="quantity4" placeholder="Enter quantity...">
+            <button onclick="buy4()">Buy</button>
         </div>
-    </div>
-
-    <div class= "row">
-        <div class= "column" id="ramen5"></div>
-        <div class= "column" id="food5">
+   
+        <div class="column" id="ramen5"></div>
+        <div class="column" id="food5">
             <h1 id="name5"></h1>
             <p id="broth5"></p>
             <p id="toppings5"></p>
             <p id="price5"></p>
-        <input type="integer" id="quantity5" placeholder="Enter quantity...">
-        <button onclick="buy5()">Buy</button>
-     </div>
+            <input type="integer" id="quantity5" placeholder="Enter quantity...">
+            <button onclick="buy5()">Buy</button>
+        </div>
     </div>
 
     <div id="showPurchase">
@@ -101,7 +96,6 @@
 
         var food0name;
         var food0price;
-
 
         /*********Ramen 0**********/
 
@@ -165,7 +159,7 @@
         /*********Ramen 0**********/
         function buy0() {
             //Get the value of the quantity field//
-            var qty = document.getElementById('quantity').value; 
+            var qty = document.getElementById('quantity').value;
             var subtotal = qty * foodPrices[0];
             total.push(subtotal * 1.04712.toFixed(2));
             document.getElementById('quantity').value = "";
@@ -182,7 +176,7 @@
                 return a + b;
             }
             //I output the SUM of everything in the total array and fix the decimal places to 2//
-            document.getElementById('totalDisplay').innerHTML = "Total= $"+sum.toFixed(2);
+            document.getElementById('totalDisplay').innerHTML = "Total...... $" + sum.toFixed(2);
         }
 
 
@@ -202,7 +196,7 @@
             function add(a, b) {
                 return a + b;
             }
-            document.getElementById('totalDisplay').innerHTML = "Total= $"+sum.toFixed(2);
+            document.getElementById('totalDisplay').innerHTML = "Total...... $" + sum.toFixed(2);
         }
 
 
@@ -222,7 +216,7 @@
             function add(a, b) {
                 return a + b;
             }
-            document.getElementById('totalDisplay').innerHTML = "Total= $"+sum.toFixed(2);
+            document.getElementById('totalDisplay').innerHTML = "Total...... $" + sum.toFixed(2);
         }
 
         /*********Ramen 3**********/
@@ -241,7 +235,7 @@
             function add(a, b) {
                 return a + b;
             }
-            document.getElementById('totalDisplay').innerHTML = "Total= $"+sum.toFixed(2);
+            document.getElementById('totalDisplay').innerHTML = "Total...... $" + sum.toFixed(2);
         }
 
         /*********Ramen 4**********/
@@ -260,7 +254,7 @@
             function add(a, b) {
                 return a + b;
             }
-            document.getElementById('totalDisplay').innerHTML = "Total= $"+sum.toFixed(2);
+            document.getElementById('totalDisplay').innerHTML = "Total...... $" + sum.toFixed(2);
         }
 
         /*********Ramen 5**********/
@@ -274,38 +268,47 @@
 
             node.appendChild(textNode);
             document.getElementById("orderList").appendChild(node);
+
             var sum = total.reduce(add, 0);
 
             function add(a, b) {
                 return a + b;
             }
-            document.getElementById('totalDisplay').innerHTML = "Total= $"+sum.toFixed(2);
+            document.getElementById('totalDisplay').innerHTML = "Total...... $" + sum.toFixed(2);
+
         }
-    </script>
-    </div>
+   
 
+        var order= [];
+        function totalItems() {
+            var sum = total.reduce(add, 0);
 
-    <script>
-    function totalItems() {
+            function add(a, b) {
+                return a + b;
+                }
+
+            var pleaseWork= order.push("orderList");
+
+            localStorage.setItem('key1', sum.toFixed(2));
+            localStorage.setItem('crab1', pleaseWork);
+            location.href = "page2.html";
+
+        }
+
         
-        var a= document.getElementById("user").value;
-        localStorage.setItem('key1',a);
-        location.href= "page2.html";
-
+        
         var previous= null;
         var current= null;
-        setInternal(function() {
+        setInterval(function() {
         $.getJSON("menu.json",function(json){
             current=JSON.stringify(json);
             if (previous && current&& previous!==current) {
-      location.reload();
       
-    }
-    previous==current;
-  });
-}, 2000);
-    }
-        
+            location.reload();
+        }
+        previous==current;
+            });
+        }, 2000);
     </script>
 
 </body>
