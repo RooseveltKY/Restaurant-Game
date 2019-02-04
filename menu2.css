@@ -17,6 +17,13 @@ body {
   background-repeat: no-repeat;
 }
 
+img{
+  width: 500px;
+  height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 #title {
   font-family: "Courier New", Courier, monospace;
