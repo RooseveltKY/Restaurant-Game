@@ -13,7 +13,7 @@
 
 body {
   background-image: url("ramenBackground.png");
-  background-size:cover;
+  background-size: contain;
   }
 
 #title {
