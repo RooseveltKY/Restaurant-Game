@@ -1,316 +1,169 @@
-<html>
+.column {
+    float: left;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
 
-<head>
-    <link rel="stylesheet" href="menu2.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    float: left;
+  }
 
-</head>
+body {
+  background-image: url("woodBackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
-<body>
-    <br>
-    <h1 id="title">Order Site</h1>
-    <p id="subtext">1120 Nehoa St Honolulu, HI Contact Us (808)123-4567</p>
+img{
+  width: 500px;
+  height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-    <br>
-    
-    <div class="row">
-        <div class="column" id="ramen0"></div>
-        <div class="column" id="food0">
-            <h1 id="name0"></h1>
-            <p id="broth0"></p>
-            <p id="toppings0"></p>
-            <p id="price0"></p>
-            <input type="integer" id="quantity" placeholder="Enter quantity...">
-            <button onclick="buy0()">Buy</button>
-        </div>
-    
-    <div class="column" id="ramen1"></div>
-        <div class="column" id="food1">
-            <h1 id="name1"></h1>
-            <p id="broth1"></p>
-            <p id="toppings1"></p>
-            <p id="price1"></p>
-            <input type="integer" id="quantity1" placeholder="Enter quantity...">
-            <button onclick="buy1()">Buy</button>
-        </div>
-    </div>
+#title {
+  font-family: "Courier New", Courier, monospace;
+  font-variant: small-caps;
+  font-size: 90px;
+  color: #020311;
+  text-align: center;
+  line-height: 0px;
+}
 
-    <div class="row">
-        <div class="column" id="ramen2"></div>
-        <div class="column" id="food2">
-            <h1 id="name2"></h1>
-            <p id="broth2"></p>
-            <p id="toppings2"></p>
-            <p id="price2"></p>
-            <input type="integer" id="quantity2" placeholder="Enter quantity...">
-            <button onclick="buy2()">Buy</button>
-        </div>
-   
-        <div class="column" id="ramen3"></div>
-        <div class="column" id="food3">
-            <h1 id="name3"></h1>
-            <p id="broth3"></p>
-            <p id="toppings3"></p>
-            <p id="price3"></p>
-            <input type="integer" id="quantity3" placeholder="Enter quantity...">
-            <button onclick="buy3()">Buy</button>
-        </div>
-    </div>
+#subtext {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  color: #020311;
+  text-align: center;
+}
 
-    <div class="row">
-        <div class="column" id="ramen4"></div>
-        <div class="column" id="food4">
-            <h1 id="name4"></h1>
-            <p id="broth4"></p>
-            <p id="toppings4"></p>
-            <p id="price4"></p>
-            <input type="integer" id="quantity4" placeholder="Enter quantity...">
-            <button onclick="buy4()">Buy</button>
-        </div>
-   
-        <div class="column" id="ramen5"></div>
-        <div class="column" id="food5">
-            <h1 id="name5"></h1>
-            <p id="broth5"></p>
-            <p id="toppings5"></p>
-            <p id="price5"></p>
-            <input type="integer" id="quantity5" placeholder="Enter quantity...">
-            <button onclick="buy5()">Buy</button>
-        </div>
-    </div>
+#ramen0 {
+  background-image: url("shoyuRamen.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 300px;
+  float: left;
+}
 
-    <div id="showPurchase">
-        <h1 id="yourOrder">Your Order</h1>
-        <ul id="orderList"></ul>
-        <p id="totalDisplay"></p>
-        <p id="taxTotal"></p>
-        <button onclick="totalItems()">Checkout</button>
-    </div>
+#food0 {
+  font-family: "Courier New", Courier, monospace;
+  color: #020311;
+  background-color: #bbb5b0;
+  width: 250px;
+  height: 300px;
+  margin-right: 30px;
+  
+  float: left;
+}
 
+#ramen1 {
+  background-image: url("misoRamen.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 300px;
+  float: left;
+}
 
-    <script>
-        var foodName = [];
-        var foodPrices = [];
-        var total = [];
+#food1 {
+  font-family: "Courier New", Courier, monospace;
+  width: 250px;
+  height: 300px;
+  margin-right: 30px;
+  color: #020311;
+  background-color: #bbb5b0;
+  float: left;
+}
 
-        var food0name;
-        var food0price;
+#ramen2 {
+  background-image: url("tonkRamen.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 300px;
+  float: left;
+}
 
-        /*********Ramen 0**********/
+#food2 {
+  font-family: "Courier New", Courier, monospace;
+  width: 250px;
+  height: 300px;
+  margin-right: 30px;
+  color: #020311;
+  background-color: #bbb5b0;
+  float: left;
+}
 
-        var xmlhttp = new XMLHttpRequest(); //I want to begin a new file request from the server
-        xmlhttp.onreadystatechange = function () { //Do this function to check if it is ready
-            if (this.readyState == 4 && this.status == 200) { //If the server is ready(4) and the file is available(200)
-                var mydata = JSON.parse(this.responseText); //Save the JSOn file as mydata and convert it in a readable format.
+#ramen3 {
+  background-image: url("houseSpecial.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 300px; 
+  float: left;
+}
 
-                for (var i = 0; i < mydata.food.length; i++) {
-                    foodName.push(mydata.food[i].name);
-                    foodPrices.push(mydata.food[i].price);
-                    console.log(foodName);
-                    console.log(foodPrices);
-                }
-                document.getElementById('name0').innerHTML = mydata.food[0].name;
-                document.getElementById('broth0').innerHTML = mydata.food[0].broth;
-                food0price = mydata.food[0].price;
-                document.getElementById('price0').innerHTML = "$" + mydata.food[0].price + ".00";
-                document.getElementById('toppings0').innerHTML = mydata.food[0].toppings;
+#food3 {
+  font-family: "Courier New", Courier, monospace;
+  width: 250px;
+  height: 300px;
+  margin-right: 30px;
+  color: #020311;
+  background-color: #bbb5b0;
+  float: left;
+}
 
+#ramen4 {
+  background-image: url("spicyShoyu.jpg");
+  background-size: cover;
+  width: 250px;
+  height: 300px;
+  background-repeat: no-repeat;
+  float: left;
+}
 
-                document.getElementById('name1').innerHTML = mydata.food[1].name;
-                document.getElementById('broth1').innerHTML = mydata.food[1].broth;
-                food1price = mydata.food[1].price;
-                document.getElementById('price1').innerHTML = "$" + mydata.food[1].price + ".00";
-                document.getElementById('toppings1').innerHTML = mydata.food[1].toppings;
+#food4 {
+  font-family: "Courier New", Courier, monospace;
+  background-size: auto 300px;
+  width: 250px;
+  height: 300px;
+  color: #020311;
+  margin-right: 30px;
+  background-color: #bbb5b0;
+  float: left;
+}
 
-                document.getElementById('name2').innerHTML = mydata.food[2].name;
-                document.getElementById('broth2').innerHTML = mydata.food[2].broth;
-                food2price = mydata.food[2].price;
-                document.getElementById('price2').innerHTML = "$" + mydata.food[2].price;
-                document.getElementById('toppings2').innerHTML = mydata.food[2].toppings;
+#ramen5 {
+  background-image: url("spicyMiso.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 300px;
+  float: left;
+}
 
-                document.getElementById('name3').innerHTML = mydata.food[3].name;
-                document.getElementById('broth3').innerHTML = mydata.food[3].broth;
-                food3price = mydata.food[3].price;
-                document.getElementById('price3').innerHTML = "$" + mydata.food[3].price;
-                document.getElementById('toppings3').innerHTML = mydata.food[3].toppings;
+#food5 {
+  font-family: "Courier New", Courier, monospace;
+  width: 250px;
+  height: 300px;
+  color: #020311;
+  margin-right: 30px;
+  background-color: #bbb5b0;
+  float: left;
+}
 
-                document.getElementById('name4').innerHTML = mydata.food[4].name;
-                document.getElementById('broth4').innerHTML = mydata.food[4].broth;
-                food4price = mydata.food[4].price;
-                document.getElementById('price4').innerHTML = "$" + mydata.food[4].price;
-                document.getElementById('toppings4').innerHTML = mydata.food[4].toppings;
-
-                document.getElementById('name5').innerHTML = mydata.food[5].name;
-                document.getElementById('broth5').innerHTML = mydata.food[5].broth;
-                food5price = mydata.food[5].price;
-                document.getElementById('price5').innerHTML = "$" + mydata.food[5].price;
-                document.getElementById('toppings5').innerHTML = mydata.food[5].toppings;
-            }
-        };
-
-        xmlhttp.open("GET", "menu.json", true); //I will GET a file called menu.json
-        xmlhttp.send(); //Send to the browser
-
-
-
-
-
-        /*********Ramen 0**********/
-        function buy0() {
-            //Get the value of the quantity field//
-            var qty = document.getElementById('quantity').value;
-            var subtotal = qty * foodPrices[0];
-            total.push(subtotal * 1.04712.toFixed(2));
-            document.getElementById('quantity').value = "";
-            var node = document.createElement('li');
-            var textNode = document.createTextNode(qty + " x " + foodName[0]);
-
-            node.appendChild(textNode);
-            document.getElementById("orderList").appendChild(node);
-
-            //I am creating a LOCAL variable called sum and reducing the total array.//
-            var sum = total.reduce(add, 0);
-            //This function within a function will return the value from low to high and add them together.//
-            function add(a, b) {
-                return a + b;
-            }
-            //I output the SUM of everything in the total array and fix the decimal places to 2//
-            document.getElementById('totalDisplay').innerHTML = "Total...... $" + sum.toFixed(2);
-        }
-
-
-        /*********Ramen 1**********/
-        function buy1() {
-            var qty = document.getElementById('quantity1').value;
-            var subtotal = qty * foodPrices[1];
-            total.push(subtotal * 1.04712.toFixed(2));
-            document.getElementById('quantity1').value = "";
-            var node = document.createElement('li');
-            var textNode = document.createTextNode(qty + " x " + foodName[1]);
-
-            node.appendChild(textNode);
-            document.getElementById("orderList").appendChild(node);
-            var sum = total.reduce(add, 0);
-
-            function add(a, b) {
-                return a + b;
-            }
-            document.getElementById('totalDisplay').innerHTML = "Total...... $" + sum.toFixed(2);
-        }
-
-
-        /*********Ramen 2**********/
-        function buy2() {
-            var qty = document.getElementById('quantity2').value;
-            var subtotal = qty * foodPrices[2];
-            total.push(subtotal * 1.04712.toFixed(2));
-            document.getElementById('quantity2').value = "";
-            var node = document.createElement('li');
-            var textNode = document.createTextNode(qty + " x " + foodName[2]);
-
-            node.appendChild(textNode);
-            document.getElementById("orderList").appendChild(node);
-            var sum = total.reduce(add, 0);
-
-            function add(a, b) {
-                return a + b;
-            }
-            document.getElementById('totalDisplay').innerHTML = "Total...... $" + sum.toFixed(2);
-        }
-
-        /*********Ramen 3**********/
-        function buy3() {
-            var qty = document.getElementById('quantity3').value;
-            var subtotal = qty * foodPrices[3];
-            total.push(subtotal * 1.04712.toFixed(2));
-            document.getElementById('quantity3').value = "";
-            var node = document.createElement('li');
-            var textNode = document.createTextNode(qty + " x " + foodName[3]);
-
-            node.appendChild(textNode);
-            document.getElementById("orderList").appendChild(node);
-            var sum = total.reduce(add, 0);
-
-            function add(a, b) {
-                return a + b;
-            }
-            document.getElementById('totalDisplay').innerHTML = "Total...... $" + sum.toFixed(2);
-        }
-
-        /*********Ramen 4**********/
-        function buy4() {
-            var qty = document.getElementById('quantity4').value;
-            var subtotal = qty * foodPrices[4];
-            total.push(subtotal * 1.04712.toFixed(2));
-            document.getElementById('quantity4').value = "";
-            var node = document.createElement('li');
-            var textNode = document.createTextNode(qty + " x " + foodName[4]);
-
-            node.appendChild(textNode);
-            document.getElementById("orderList").appendChild(node);
-            var sum = total.reduce(add, 0);
-
-            function add(a, b) {
-                return a + b;
-            }
-            document.getElementById('totalDisplay').innerHTML = "Total...... $" + sum.toFixed(2);
-        }
-
-        /*********Ramen 5**********/
-        function buy5() {
-            var qty = document.getElementById('quantity5').value;
-            var subtotal = qty * foodPrices[5];
-            total.push(subtotal * 1.04712.toFixed(2));
-            document.getElementById('quantity5').value = "";
-            var node = document.createElement('li');
-            var textNode = document.createTextNode(qty + " x " + foodName[5]);
-
-            node.appendChild(textNode);
-            document.getElementById("orderList").appendChild(node);
-
-            var sum = total.reduce(add, 0);
-
-            function add(a, b) {
-                return a + b;
-            }
-            document.getElementById('totalDisplay').innerHTML = "Total...... $" + sum.toFixed(2);
-
-        }
-   
-
-        var order= [];
-        var pleaseWork= order.push("orderList");
-        
-        function totalItems() {
-            var sum = total.reduce(add, 0);
-
-            function add(a, b) {
-                return a + b;
-                }
-
-            localStorage.setItem('key1', sum.toFixed(2));
-            localStorage.setItem('key2', pleaseWork);
-            location.href = "page2.html";
-
-        }
-
-        
-        
-        var previous= null;
-        var current= null;
-        setInterval(function() {
-        $.getJSON("menu.json",function(json){
-            current=JSON.stringify(json);
-            if (previous && current&& previous!==current) {
-      
-            location.reload();
-        }
-        previous==current;
-            });
-        }, 2000);
-    </script>
-
-</body>
-
-</html>
+#showPurchase {
+  width: 1350px;
+  height: auto;
+  color: #020311;
+  background-color: #cfdcdd;
+  font-family: "Courier New", Courier, monospace;
+  padding: 20px;
+  border-radius: 12px;
+  float: left;
+}
