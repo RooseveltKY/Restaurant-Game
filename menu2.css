@@ -11,12 +11,6 @@
     float: left;
   }
 
-body {
-  background-image: url("woodBackground.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
 #title {
   font-family: "Courier New", Courier, monospace;
   font-variant: small-caps;
@@ -153,7 +147,7 @@ body {
   width: 100%;
   height: auto;
   color: #020311;
-  background-color: #cfdcdd;
+  background-color: #10b3be;
   font-family: "Courier New", Courier, monospace;
   padding: 20px;
   border-radius: 12px;
