@@ -10,6 +10,20 @@
     clear: both;
     float: left;
   }
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #cfdcdd;
+  color: #020311;
+  text-align: left;
+}
+body {
+  background-image: url("woodBackground.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
 #title {
   font-family: "Courier New", Courier, monospace;
@@ -143,13 +157,3 @@
   float: left;
 }
 
-#showPurchase {
-  width: 1350px;
-  height: auto;
-  color: #020311;
-  background-color: #cfdcdd;
-  font-family: "Courier New", Courier, monospace;
-  padding: 20px;
-  border-radius: 12px;
-  float: left;
-}
