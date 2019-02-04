@@ -10,15 +10,7 @@
     clear: both;
     float: left;
   }
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #ddcfd4;
-  color: #020311;
-  text-align: left;
-}
+
 body {
   background-image: url("woodBackground.jpg");
   background-size: contain;
@@ -157,3 +149,13 @@ body {
   float: left;
 }
 
+#showPurchase {
+  width: 100%;
+  height: auto;
+  color: #020311;
+  background-color: #cfdcdd;
+  font-family: "Courier New", Courier, monospace;
+  padding: 20px;
+  border-radius: 12px;
+  float: left;
+}
