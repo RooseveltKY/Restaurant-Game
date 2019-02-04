@@ -11,6 +11,12 @@
     float: left;
   }
 
+body {
+  background-image: url("woodBackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 
 #title {
   font-family: "Courier New", Courier, monospace;
