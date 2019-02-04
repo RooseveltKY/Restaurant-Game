@@ -280,6 +280,8 @@
    
 
         var order= [];
+        var pleaseWork= order.push("orderList");
+        
         function totalItems() {
             var sum = total.reduce(add, 0);
 
@@ -287,10 +289,8 @@
                 return a + b;
                 }
 
-            var pleaseWork= order.push("orderList");
-
             localStorage.setItem('key1', sum.toFixed(2));
-            localStorage.setItem('crab1', pleaseWork);
+            localStorage.setItem('key2', pleaseWork);
             location.href = "page2.html";
 
         }
