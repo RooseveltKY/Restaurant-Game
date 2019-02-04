@@ -11,11 +11,6 @@
     float: left;
   }
 
-body {
-  background-image: url("ramenBackground.png");
-  background-size: contain;
-  }
-
 #title {
   font-family: "Courier New", Courier, monospace;
   font-variant: small-caps;
