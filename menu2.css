@@ -13,16 +13,8 @@
 
 body {
   background-image: url("woodBackground.jpg");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-}
-
-img{
-  width: 500px;
-  height: 50px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 #title {
